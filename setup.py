@@ -166,12 +166,12 @@ metadata = dict(
   install_requires = requirements,
   dependency_links = ext_links,
   package_data = {
-    'data': ['data/Ngram_keywords.json'],
-    'licenses': ['licenses/licenseList.csv', 'licenses/processedLicenses.csv']
+    '/usr/share/atarashi/json': ['data/Ngram_keywords.json'],
+    '/usr/share/atarashi/licenses': ['licenses/licenseList.csv', 'licenses/processedLicenses.csv']
   },
   data_files = [
-    ('data', ['data/Ngram_keywords.json']),
-    ('licenses', ['licenses/licenseList.csv', 'licenses/processedLicenses.csv'])
+    ('/usr/share/atarashi/json', ['data/Ngram_keywords.json']),
+    ('/usr/share/atarashi/licenses', ['licenses/licenseList.csv', 'licenses/processedLicenses.csv'])
   ],
   cmdclass = {
     'install_deps': InstallAtarashiBuildRequirements,

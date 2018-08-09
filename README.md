@@ -33,10 +33,14 @@ http://fossology.github.io/atarashi
 
 ### Install
 
-- `# python setup.py install`
+- `# python3 setup.py install`
 
 #### To install dependencies only
 - `# pip install -r requirements.txt`
+
+OR
+
+- `# python3 setup.py install_deps`
 
 
 ## How to run
