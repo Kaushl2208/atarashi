@@ -35,9 +35,8 @@ http://fossology.github.io/atarashi
 
 - `# python setup.py install`
 
-### Installing just dependencies
-
-- `pip install -r requirements.txt`
+#### To install dependencies only
+- `# pip install -r requirements.txt`
 
 
 ## How to run
@@ -92,15 +91,21 @@ Get the help by running `atarashi -h` or `atarashi --help`
 ## Creating Debian packages
 
 - Install dependencies
+```sh
+# apt-get install python3-setuptools python3-all debhelper python-pip
 ```
-# apt-get install python3-setuptools python3-all debhelper
-# pip install stdeb
+- Get the source distribution file using
+```sh
+$ python3 setup.py sdist
 ```
-- Create Debian packages
+- Copy the archive and rename it
+```sh
+$ cp dist/atarashi-0.0.9.tar.gz ../atarashi_0.0.9.orig.tar.gz
 ```
-$ python3 setup.py --command-packages=stdeb.command bdist_deb
+- Build the package
+```sh
+$ debuild
 ```
-- Locate the files under `deb_dist`
 
 ## License
 
